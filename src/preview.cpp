@@ -225,6 +225,16 @@ void drawGui(int windowWidth, int windowHeight) {
 
     ImGui::Separator();
 
+
+    ImGui::Checkbox("Show NBuffer", &ui_showNbuffer);
+
+    ImGui::Separator();
+
+
+    ImGui::Checkbox("Show PBuffer", &ui_showPbuffer);
+
+    ImGui::Separator();
+
     if (ImGui::Button("Save image and exit")) {
         ui_saveAndExit = true;
     }
