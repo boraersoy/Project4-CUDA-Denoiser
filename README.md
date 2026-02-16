@@ -46,12 +46,12 @@ It took 100 iterations to achieve the smooth look of pathtraced imaged of 4000 i
 Blur  increases with increasing filter size also amount of detail decreases if the filter size is too much
 
 | Filter Size | Denoised |
-|-----| ----- | ---- |
-| 20 | ![](img/10samplesnofilter.png) |
-| 40 | ![](img/50samplesnofilter.png) |
-| 60 | ![](img/100samplesnofilter.png)| 
-| 80 | ![](img/10samplesnofilter.png) |
-| 100 | ![](img/50samplesnofilter.png)|
+|-----|  ---- |
+| 20 | ![](img/filtersize20.png) |
+| 40 | ![](img/filtersize40.png) |
+| 60 | ![](img/filtersize60.png)| 
+| 80 | ![](img/filtersize80.png) |
+| 100 | ![](img/filtersize100.png)|
 
 ### Comparison between scenes with small ceiling light and large ceiling light
 
