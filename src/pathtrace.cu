@@ -72,15 +72,6 @@ __global__ void sendImageToPBO(uchar4* pbo, glm::ivec2 resolution,
     }
 }
 
-__global__ void normalizeImage(glm::vec3* input, glm::vec3* output, glm::ivec2 resolution, int iter) {
-    int x = (blockIdx.x * blockDim.x) + threadIdx.x;
-    int y = (blockIdx.y * blockDim.y) + threadIdx.y;
-
-    if (x < resolution.x && y < resolution.y) {
-        int index = x + (y * resolution.x);
-        output[index] = input[index] / float(iter);
-    }
-}
 
 __global__ void gbufferToPBO(uchar4* pbo, glm::ivec2 resolution, GBufferPixel* gBuffer) {
     int x = (blockIdx.x * blockDim.x) + threadIdx.x;
