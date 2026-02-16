@@ -33,3 +33,48 @@ Cornell Ceiling Light scene with 10 samples, color weight = 0.522, normal weight
 | ---- | ----| ---- |
 |![](img/10samplesnoblur.png)|![](img/10samplessimpleblur.png)|![](img/10sampleedgeavoidingblur.png)|
 
+### Visual Analysis
+
+It took 100 iterations to achieve the smooth look of pathtraced imaged of 4000 iterations. So the tecnique really does the work of hours of pathtracing.
+
+| Pathtraced Image 4000 samples | Denoised imaged 100 samples |
+| ----- | ----- |
+|![](img/4000sampledragon.png)|![](img/100samplesdragon.png)|
+
+### Varying Filter Size
+
+Blur  increases with increasing filter size also amount of detail decreases if the filter size is too much
+
+| Filter Size | Denoised |
+|-----| ----- | ---- |
+| 20 | ![](img/10samplesnofilter.png) |
+| 40 | ![](img/50samplesnofilter.png) |
+| 60 | ![](img/100samplesnofilter.png)| 
+| 80 | ![](img/10samplesnofilter.png) |
+| 100 | ![](img/50samplesnofilter.png)|
+
+### Comparison between scenes with small ceiling light and large ceiling light
+
+More light means more sampling and less noise. So the scene with large ceiling light is less noisy than the scene with small ceiling light.
+
+
+| Small Ceiling Light | Large Ceiling Light |
+| ----- | ----- |
+|![](img/100samplessmalllight.png)|![](img/100sampleslargelight.png)|
+
+### Performance Impacts
+
+### Denoising overhead with varying filter size
+
+Denosing is not dependent to the scene complexity but it is dependent to the filter size. It goes linearly with filter size.
+
+![](img/Figure_1.png)
+
+### Denosing time with varying resolution
+
+Denoising algorithm scales approximately O(N) with respect to pixel count
+
+![](img/Figure2.png)
+
+### 
+
