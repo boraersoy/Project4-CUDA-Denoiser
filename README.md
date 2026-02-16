@@ -7,7 +7,6 @@ CUDA Denoiser For CUDA Path Tracer
 * Tested on: 13th Gen Intel(R) Core(TM) i7-13700HX, 2100 Mhz, 16 Core(s), 24 Logical Processor(s), RTX 4060 8GB AD107
 
 ### CUDA DENOISER
-![](img/coverphoto.png)
 
 This project is a implementation of the [Edge-Avoiding À-Trous Wavelet Transform for fast Global Illumination Filtering](https://jo.dreggn.org/home/2010_atrous.pdf) into a CUDA pathtracer.
 This paper introduces an edge-aware À-Trous wavelet filter for fast denoising of noisy Monte Carlo global illumination images. By combining a multi-scale à-trous convolution with edge-stopping weights based on geometry and illumination differences, the method preserves sharp features like shadows and edges while smoothing noise and runs fast enough for interactive rendering. It lets a renderer produce smooth indirect lighting with far fewer samples than standard path tracing.
